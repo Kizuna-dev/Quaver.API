@@ -22,7 +22,7 @@ namespace Quaver.API.Enums
         Keys5 = 5,
         Keys6 = 6,
         Keys7 = 7,
-        Keys9 = 8,
-        Keys10 = 9
+        Keys9 = 9,
+        Keys10 = 10
     }
 }
