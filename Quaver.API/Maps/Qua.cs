@@ -485,11 +485,32 @@ namespace Quaver.API.Maps
 
             switch (Mode)
             {
+                case GameMode.Keys1:
+                    count = 1;
+                    break;
+                case GameMode.Keys2:
+                    count = 2;
+                    break;
+                case GameMode.Keys3:
+                    count = 3;
+                    break;
                 case GameMode.Keys4:
                     count = 4;
                     break;
+                case GameMode.Keys5:
+                    count = 5;
+                    break;
+                case GameMode.Keys6:
+                    count = 6;
+                    break;
                 case GameMode.Keys7:
                     count = 7;
+                    break;
+                case GameMode.Keys9:
+                    count = 9;
+                    break;
+                case GameMode.Keys10:
+                    count = 10;
                     break;
                 default:
                     throw new InvalidEnumArgumentException();
@@ -601,9 +622,23 @@ namespace Quaver.API.Maps
         {
             switch (Mode)
             {
+                case GameMode.Keys1:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys2:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys3:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
                 case GameMode.Keys4:
                     return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys5:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys6:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
                 case GameMode.Keys7:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys9:
+                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
+                case GameMode.Keys10:
                     return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
                 default:
                     throw new InvalidEnumArgumentException();

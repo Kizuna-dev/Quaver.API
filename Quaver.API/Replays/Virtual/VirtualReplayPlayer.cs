@@ -101,6 +101,30 @@ namespace Quaver.API.Replays.Virtual
             // Add virtual key bindings based on the game mode of the replay.
             switch (Map.Mode)
             {
+                case GameMode.Keys1:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2)
+                    };
+                    break;
+                case GameMode.Keys2:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3)
+                    };
+                    break;
+                case GameMode.Keys3:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K4)
+                    };
+                    break;
                 case GameMode.Keys4:
                     InputKeyStore = new List<VirtualReplayKeyBinding>()
                     {
@@ -109,6 +133,29 @@ namespace Quaver.API.Replays.Virtual
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K4),
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K5),
+                    };
+                    break;
+                case GameMode.Keys5:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K4),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K5),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K6)
+                    };
+                    break;
+                case GameMode.Keys6:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K4),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K5),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K6),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K7)
                     };
                     break;
                 case GameMode.Keys7:
@@ -123,6 +170,37 @@ namespace Quaver.API.Replays.Virtual
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K7),
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K8),
                         new VirtualReplayKeyBinding(ReplayKeyPressState.K9),
+                    };
+                    break;
+                case GameMode.Keys9:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K4),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K5),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K6),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K7),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K8),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K9),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K10),
+                    };
+                    break;
+                case GameMode.Keys10:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K2),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K3),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K4),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K5),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K6),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K7),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K8),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K9),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K10),
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K11),
                     };
                     break;
                 default:

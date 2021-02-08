@@ -146,11 +146,25 @@ namespace Quaver.API.Maps.Processors.Difficulty.Rulesets.Keys
             // Compute for overall difficulty
             switch (Map.Mode)
             {
+                case GameMode.Keys1:
+                    break;
+                case GameMode.Keys2:
+                    break;
+                case GameMode.Keys3:
+                    break;
                 case GameMode.Keys4:
                     OverallDifficulty = ComputeForOverallDifficulty(rate);
                     break;
+                case GameMode.Keys5:
+                    break;
+                case GameMode.Keys6:
+                    break;
                 case GameMode.Keys7:
                     OverallDifficulty = (ComputeForOverallDifficulty(rate, Hand.Left) + ComputeForOverallDifficulty(rate, Hand.Right) ) / 2;
+                    break;
+                case GameMode.Keys9:
+                    break;
+                case GameMode.Keys10:
                     break;
             }
         }

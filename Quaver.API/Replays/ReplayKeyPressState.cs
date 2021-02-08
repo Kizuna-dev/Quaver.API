@@ -23,6 +23,8 @@ namespace Quaver.API.Replays
         K6 = 1 << 5,
         K7 = 1 << 6,
         K8 = 1 << 7,
-        K9 = 1<< 8 // Scratch Lane Second Key on 7K+1
+        K9 = 1<< 8, // Scratch Lane Second Key on 7K+1
+        K10 = 1 << 9,
+        K11 = 1 << 10
     }
 }

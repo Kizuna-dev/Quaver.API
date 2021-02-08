@@ -23,14 +23,26 @@ namespace Quaver.API.Helpers
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    return "1K";
+                case GameMode.Keys2:
+                    return "2K";
+                case GameMode.Keys3:
+                    return "3K";
                 case GameMode.Keys4:
-                    if (hasScratch)
-                        return "4K+1";
                     return "4K";
+                case GameMode.Keys5:
+                    return "5K";
+                case GameMode.Keys6:
+                    return "6K";
                 case GameMode.Keys7:
                     if (hasScratch)
                         return "7K+1";
                     return "7K";
+                case GameMode.Keys9:
+                    return "9K";
+                case GameMode.Keys10:
+                    return "10K";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
@@ -46,10 +58,24 @@ namespace Quaver.API.Helpers
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    return "1 Keys";
+                case GameMode.Keys2:
+                    return "2 Keys";
+                case GameMode.Keys3:
+                    return "3 Keys";
                 case GameMode.Keys4:
                     return "4 Keys";
+                case GameMode.Keys5:
+                    return "5 Keys";
+                case GameMode.Keys6:
+                    return "6 Keys";
                 case GameMode.Keys7:
                     return "7 Keys";
+                case GameMode.Keys9:
+                    return "9 Keys";
+                case GameMode.Keys10:
+                    return "10 Keys";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }

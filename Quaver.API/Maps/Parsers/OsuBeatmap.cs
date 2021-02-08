@@ -293,7 +293,7 @@ namespace Quaver.API.Maps.Parsers
                                 case "CircleSize":
                                     KeyCount = int.Parse(value, CultureInfo.InvariantCulture);
 
-                                    if (KeyCount != 4 && KeyCount != 7 && KeyCount != 5 && KeyCount != 8)
+                                    if (KeyCount != 1 && KeyCount != 2 && KeyCount != 3 && KeyCount != 4 && KeyCount != 5 && KeyCount != 6 && KeyCount != 7 && KeyCount != 8 && KeyCount != 9 && KeyCount != 10)
                                         IsValid = false;
                                     break;
                                 case "OverallDifficulty":
@@ -482,8 +482,23 @@ namespace Quaver.API.Maps.Parsers
             // Get the correct game mode based on the amount of keys the map has.
             switch (KeyCount)
             {
+                case 1:
+                    qua.Mode = GameMode.Keys1;
+                    break;
+                case 2:
+                    qua.Mode = GameMode.Keys2;
+                    break;
+                case 3:
+                    qua.Mode = GameMode.Keys3;
+                    break;
                 case 4:
                     qua.Mode = GameMode.Keys4;
+                    break;
+                case 5:
+                    qua.Mode = GameMode.Keys5;
+                    break;
+                case 6:
+                    qua.Mode = GameMode.Keys6;
                     break;
                 case 7:
                     qua.Mode = GameMode.Keys7;
@@ -491,6 +506,12 @@ namespace Quaver.API.Maps.Parsers
                 case 8:
                     qua.Mode = GameMode.Keys7;
                     qua.HasScratchKey = true;
+                    break;
+                case 9:
+                    qua.Mode = GameMode.Keys9;
+                    break;
+                case 10:
+                    qua.Mode = GameMode.Keys10;
                     break;
                 default:
                     qua.Mode = (GameMode)(-1);
@@ -723,6 +744,9 @@ namespace Quaver.API.Maps.Parsers
         public bool Key5 { get; set; }
         public bool Key6 { get; set; }
         public bool Key7 { get; set; }
+        public bool Key8 { get; set; }
+        public bool Key9 { get; set; }
+        public bool Key10 { get; set; }
         public int Volume { get; set; }
 
         /// <summary>
