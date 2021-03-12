@@ -78,6 +78,11 @@ namespace Quaver.API.Maps
         public string Source { get; set; }
 
         /// <summary>
+        ///     The genre of the song
+        /// </summary>
+        public string Genre { get; set; }
+
+        /// <summary>
         ///     Any tags that could be used to help find the song.
         /// </summary>
         public string Tags { get; set; }
@@ -96,11 +101,6 @@ namespace Quaver.API.Maps
         ///     A description about this map.
         /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        ///     The genre of the song
-        /// </summary>
-        public string Genre { get; set; }
 
         /// <summary>
         ///     Indicates if the BPM changes in affect scroll velocity.
@@ -195,11 +195,11 @@ namespace Quaver.API.Maps
                    && Title == other.Title
                    && Artist == other.Artist
                    && Source == other.Source
+                   && Genre == other.Genre
                    && Tags == other.Tags
                    && Creator == other.Creator
                    && DifficultyName == other.DifficultyName
                    && Description == other.Description
-                   && Genre == other.Genre
                    && TimingPoints.SequenceEqual(other.TimingPoints, TimingPointInfo.ByValueComparer)
                    && SliderVelocities.SequenceEqual(other.SliderVelocities, SliderVelocityInfo.ByValueComparer)
                    // ReSharper disable once CompareOfFloatsByEqualityOperator
