@@ -78,9 +78,9 @@ namespace Quaver.API.Maps
         public string Source { get; set; }
 
         /// <summary>
-        ///     The genre of the song
+        ///     The genres of the song
         /// </summary>
-        public string Genre { get; set; }
+        public string Genres { get; set; }
 
         /// <summary>
         ///     Any tags that could be used to help find the song.
@@ -195,7 +195,7 @@ namespace Quaver.API.Maps
                    && Title == other.Title
                    && Artist == other.Artist
                    && Source == other.Source
-                   && Genre == other.Genre
+                   && Genres == other.Genres
                    && Tags == other.Tags
                    && Creator == other.Creator
                    && DifficultyName == other.DifficultyName
