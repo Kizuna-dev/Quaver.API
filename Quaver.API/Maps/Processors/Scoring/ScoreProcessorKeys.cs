@@ -225,7 +225,7 @@ namespace Quaver.API.Maps.Processors.Scoring
         /// </summary>
         /// <param name="judgement"></param>
         /// <param name="isLongNoteRelease"></param>
-        public override void CalculateScore(Judgement judgement, bool isLongNoteRelease = false)
+        public override void CalculateScore(Judgement judgement, bool isLongNoteRelease = false, bool isLongNote = false)
         {
             // Update Judgement count
             CurrentJudgements[judgement]++;
@@ -275,7 +275,15 @@ namespace Quaver.API.Maps.Processors.Scoring
 #endregion
 
 #region HEALTH_CALCULATION
-            var newHealth = Health += JudgementHealthWeighting[judgement];
+            // Halve the hp weighting if the HitObject is a Long Note
+            var JudgementWeighting = JudgementHealthWeighting[judgement];
+
+            if (isLongNoteRelease == true || isLongNote == true)
+            {
+                JudgementWeighting /= 2;
+            }
+
+            var newHealth = Health += JudgementWeighting;
 
             // Constrain health from 0-100
             if (newHealth <= 0)
