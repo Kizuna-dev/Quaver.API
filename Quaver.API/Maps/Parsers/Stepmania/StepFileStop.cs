@@ -6,17 +6,17 @@ namespace Quaver.API.Maps.Parsers.Stepmania
     {
         /// <summary>
         /// </summary>
-        public float Beat { get; }
+        public double Beat { get; }
 
         /// <summary>
         /// </summary>
-        public float Seconds { get; }
+        public double Seconds { get; }
 
         /// <summary>
         /// </summary>
         /// <param name="beat"></param>
         /// <param name="seconds"></param>
-        public StepFileStop(float beat, float seconds)
+        public StepFileStop(double beat, double seconds)
         {
             Beat = beat;
             Seconds = seconds;
@@ -42,7 +42,7 @@ namespace Quaver.API.Maps.Parsers.Stepmania
                 if (stopSplit.Length != 2)
                     continue;
 
-                stops.Add(new StepFileStop(float.Parse(stopSplit[0]), float.Parse(stopSplit[1])));
+                stops.Add(new StepFileStop(double.Parse(stopSplit[0]), double.Parse(stopSplit[1])));
             }
 
             return stops;

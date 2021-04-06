@@ -7,17 +7,17 @@ namespace Quaver.API.Maps.Parsers.Stepmania
     {
         /// <summary>
         /// </summary>
-        public float Beat { get; }
+        public double Beat { get; }
 
         /// <summary>
         /// </summary>
-        public float BPM { get; }
+        public double BPM { get; }
 
         /// <summary>
         /// </summary>
         /// <param name="beat"></param>
         /// <param name="bpm"></param>
-        public StepFileBPM(float beat, float bpm)
+        public StepFileBPM(double beat, double bpm)
         {
             Beat = beat;
             BPM = bpm;
@@ -44,7 +44,7 @@ namespace Quaver.API.Maps.Parsers.Stepmania
                 if (bpmSplit.Length != 2)
                     continue;
 
-                bpms.Add(new StepFileBPM(float.Parse(bpmSplit[0]), float.Parse(bpmSplit[1])));
+                bpms.Add(new StepFileBPM(double.Parse(bpmSplit[0]), double.Parse(bpmSplit[1])));
             }
 
             return bpms;
